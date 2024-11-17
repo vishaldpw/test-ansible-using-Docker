@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  master:
+    build: ./master
+    container_name: ansible-master
+    volumes:
+      - ./master:/home/ansible
+    networks:
+      - ansible-network
+    tty: true
+  target:
+    build: ./target
+    container_name: ansible-target
+    networks:
+      - ansible-network
+    tty: true
+
+networks:
+  ansible-network:
+    driver: bridge
