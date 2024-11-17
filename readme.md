@@ -52,28 +52,33 @@ cd <repository_name>
 Run the following command to build and start the containers:
 ```bash
 docker-compose up --build -d
-
+```
 
 ## *Access the Master Node:*
 ```bash
 docker exec -it ansible-master bash
+```
 
 ## *Set Up SSH Connectivity: Generate an SSH key pair on the master:*
 ```bash
 ssh-keygen -t rsa -b 2048
+```
 
 ## *Copy the public key to the target:*
 ```bash
 ssh-copy-id target@ansible-target
+```
 
 ## *Verify Connection: Test the SSH connection:*
 ```bash
 ssh target@ansible-target
+```
 
 Run Ansible Playbooks
 1. Navigate to the Ansible working directory on the master node:
 ```bash
 cd /home/ansible
+```
 
-Create inventory and playbooks
+### *Create inventory and playbooks, in master and use ansible*
 
