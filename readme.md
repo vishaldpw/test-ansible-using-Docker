@@ -44,7 +44,7 @@ The following steps detail how to build the environment, establish connectivity,
 ```bash
 git clone <repository_url>
 cd <repository_name>
-
+```
 
 
 ## *Build and Run Containers*
